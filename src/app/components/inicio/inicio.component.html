@@ -1,1 +1,21 @@
-<p>inicio works!</p>
+<div class="h-5/6 bg-slate-700">
+
+  <div class="grid grid-cols-2 ">
+
+    <div class="flex flex-col items-center">
+      <h1 class="text-white text-2xl">Seja Bem-vindo</h1>
+      <p>{{numero}}</p>
+      <button class="bg-slate-400 p-2 text-lg border-2 border-red-500 rounded-lg mt-2" (click)="aumentar()">Aumentar</button>
+      <button class="bg-slate-400 p-2 text-lg border-2 border-red-500 rounded-lg mt-2" (click)="diminuir()">Diminuir</button>
+      
+    </div>
+    
+
+    <div>
+      <input [(ngModel)]="valorDoInput" name="valorDoInput" type="text">
+      <p>{{valorDoInput}}</p>
+    </div>
+
+
+  </div>
+</div>
