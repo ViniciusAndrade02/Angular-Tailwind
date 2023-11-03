@@ -1,5 +1,4 @@
-<div class="h-5/6 bg-slate-700">
-
+<div [ngClass]="classToApply" class="h-5/6 ">
   <div class="grid grid-cols-2 ">
 
     <div class="flex flex-col items-center">
@@ -7,6 +6,8 @@
       <p>{{numero}}</p>
       <button class="bg-slate-400 p-2 text-lg border-2 border-red-500 rounded-lg mt-2" (click)="aumentar()">Aumentar</button>
       <button class="bg-slate-400 p-2 text-lg border-2 border-red-500 rounded-lg mt-2" (click)="diminuir()">Diminuir</button>
+      <button (click)="FuncaoAlterar()" class="bg-slate-400 p-2 text-lg border-2 border-red-500 rounded-lg mt-2">{{valorDoInput}}</button>
+      <p>{{informacao}}</p>
       
     </div>
     
@@ -16,6 +17,9 @@
       <p>{{valorDoInput}}</p>
     </div>
 
-
   </div>
 </div>
+
+  <div class="flex h-9 bg-yellow-500 items-center justify-center">
+    <button *ngIf="alteracao" (click)="alterarClass()" class="text-2xl">Alterar</button>
+  </div>
